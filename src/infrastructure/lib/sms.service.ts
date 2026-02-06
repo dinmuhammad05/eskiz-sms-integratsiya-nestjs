@@ -132,18 +132,8 @@ export class SmsService implements OnModuleInit {
           data || error.message,
         );
 
-        if (status && status >= 500) {
-          throw new HttpException(
-            "SMS provider xatoligi, keyinroq urinib ko'ring",
-            502,
-          );
-        }
-
-        if (status === 400 || status === 422) {
-          throw new HttpException('SMS yuborishda kutilmagan xatolik iltimos keginroq o\'rinib ko\'ring', 400);
-        }
-      }
-
+		throw new HttpException(`SMS jo'natishda xatolik `, 400);
+	}
       this.logger.error(`SMS kutilmagan xatolik ${phone}:`, error);
       throw new HttpException("SMS jo'natishda kutilmagan xatolik", 500);
     }
