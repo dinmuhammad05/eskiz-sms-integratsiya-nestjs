@@ -12,7 +12,7 @@ Ushbu modul **Eskiz.uz API** bilan ishlash uchun mo'ljallangan professional inte
 | **Race Condition Locking** | Bir vaqtning o'zida bir nechta so'rov 401 xatosi olsa, faqat 1 ta refresh so'rovi yuboriladi, qolgan so'rovlar navbatga (Queue) qo'yiladi |
 | **Request Interception** | Har bir so'rovga Authorization headeri avtomatik qo'shiladi |
 | **Deadlock Prevention** | `_retry` flagi yordamida cheksiz qayta urinishlarning oldi olingan |
-| **Robust Error Handling** | API status kodlariga qarab (400, 422, 500+) aniq HttpException javoblari qaytariladi |
+
 
 ---
 
